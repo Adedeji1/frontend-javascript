@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "rootDir": "./src",
+    "rootDir": "js",
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "es6",
@@ -10,7 +10,7 @@
     "moduleResolution": "node",
         "skipLibCheck": true,
   },
-   "include": ["src/**/*.ts"],  
+   "include": ["js/**/*.ts"],  
   "exclude": [
     "node_modules", 
     "webpack.config.js"  
