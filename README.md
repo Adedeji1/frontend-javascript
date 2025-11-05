@@ -9,3 +9,4 @@ this is an ALX development project for Typescript
   webpack.config.js    # Webpack configuration
   package.json         # Project dependencies and scripts
   README.md            # Project documentation
+this is the readme at the root
