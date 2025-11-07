@@ -7,8 +7,8 @@ interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClass;
 }
 
-class StudentClass implements StudentClass {
-  constructor(public firstName: string, public lastName: string) {}
+class StudentClass {
+    constructor(public firstName: string, public lastName: string) {}
 
   workOnHomework(): string {
     return "Currently working";
