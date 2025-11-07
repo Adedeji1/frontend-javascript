@@ -1,13 +1,13 @@
-interface StudentClassInterface {
+interface StudentClass{
   workOnHomework(): string;
   displayName(): string;
 }
 
 interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentClassInterface;
+  new (firstName: string, lastName: string): StudentClass;
 }
 
-class StudentClass implements StudentClassInterface {
+class StudentClass implements StudentClass {
   constructor(public firstName: string, public lastName: string) {}
 
   workOnHomework(): string {
@@ -19,7 +19,6 @@ class StudentClass implements StudentClassInterface {
   }
 }
 
-// Example usage
 const student1 = new StudentClass("John", "Doe");
 console.log(student1.displayName()); 
 console.log(student1.workOnHomework());
