@@ -14,8 +14,9 @@ class StudentClass {
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;
+  }
 
-    workOnHomework(): string {
+  workOnHomework(): string {
     return "Currently working";
   }
 
@@ -23,7 +24,3 @@ class StudentClass {
     return this.firstName;
   }
 }
-
-const student1 = new StudentClass("John", "Doe");
-console.log(student1.displayName());
-console.log(student1.workOnHomework());
