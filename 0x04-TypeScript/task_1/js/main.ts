@@ -1,18 +1,25 @@
-interface Teacher {
-  firstName: string;
-  lastName: string;
-  fullTimeEmployee: boolean;
-  yearsOfExperience?: number;
-  location: string;
-  [key: string]: any;
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
 }
 
-const teacher3: Teacher = {
-  firstName: 'John',
-  fullTimeEmployee: false,
-  lastName: 'Doe',
-  location: 'London',
-  contract: false,
-};
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
+}
 
-console.log(teacher3);
+class StudentClass implements StudentClassInterface {
+  constructor(public firstName: string, public lastName: string) {}
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+// Example usage
+const student1 = new StudentClass("John", "Doe");
+console.log(student1.displayName()); 
+console.log(student1.workOnHomework());
